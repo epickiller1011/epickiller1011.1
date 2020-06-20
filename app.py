@@ -1,15 +1,11 @@
 from __future__ import division, print_function
 # coding=utf-8
-import sys
-import os
-import glob
-import re
 import numpy as np
 from keras.backend import clear_session
 import keras
 from keras.applications import vgg16 
 from keras.applications.imagenet_utils import preprocess_input, decode_predictions
-from keras.models import load_model
+
 from keras.preprocessing import image
 from keras.preprocessing.image import load_img
 from keras.preprocessing.image import img_to_array
@@ -74,14 +70,8 @@ def upload():
         # Get the file from post request
         f = request.files['file']
 
-        # Save the file to ./uploads
-        basepath = os.path.dirname(__file__)
-        file_path = os.path.join(
-            basepath, 'uploads', secure_filename(f.filename))
-        f.save(file_path)
-
         # Make prediction
-        preds = model_predict(file_path, model)
+        preds = model_predict(f, model)
 
         # Process your result for human
         # pred_class = preds.argmax(axis=-1)            # Simple argmax
