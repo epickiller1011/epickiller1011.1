@@ -2,7 +2,4 @@ keras.applications
 numpy 
 matplotlib 
 flask 
-keras.preprocessing
-keras.preprocessing.image
 keras
-keras.backend
