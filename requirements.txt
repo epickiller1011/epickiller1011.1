@@ -1,7 +1,6 @@
 keras.applications
 numpy 
 matplotlib 
-cv2
 flask 
 werkzeug.utils
 keras.preprocessing
