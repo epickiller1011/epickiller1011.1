@@ -2,9 +2,9 @@ keras.applications
 numpy 
 matplotlib 
 flask 
-werkzeug.utils
+
 keras.preprocessing
 keras.preprocessing.image
-gevent.pywsgi
+
 keras
 keras.backend
